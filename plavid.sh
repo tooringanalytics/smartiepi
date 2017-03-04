@@ -1,5 +1,4 @@
 #!/bin/sh
-filename=`./gettube.sh $1`
-echo $filename
+filename=$1
+echo "Playing $filename"
 omxplayer -r -b -o local "$filename"
-
