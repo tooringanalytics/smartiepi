@@ -1,5 +1,5 @@
 #!/bin/bash
-MUSIC="/home/pi/Music/external"
+MUSIC="/home/pi/Music/external/"
 PLAYLIST_FILE="/tmp/playlist.current"
 if [ -z "${AUDIO_OUT}" ]; then
     AUDIO_OUT="alsa"
