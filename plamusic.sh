@@ -26,7 +26,7 @@ function play_song {
     trap "echo \"Exiting(SIGPIPE)...\"; exit 255" SIGPIPE
     trap "echo \"Exiting(TERM)...\"; exit 255" TERM
 
-    omxplayer -o local "$@" > /dev/null 2>&1
+    omxplayer -o "${AUDIO_OUT}" "$@" > /dev/null 2>&1
 
     # trap SIGBUS SIGABRT SIGSEGV SIGPIPE TERM EXIT INT
 }
