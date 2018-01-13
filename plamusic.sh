@@ -1,7 +1,7 @@
 #!/bin/bash
-MUSIC="/media/pi/external/Music"
+MUSIC="/home/pi/Music/external"
 PLAYLIST_FILE="/tmp/playlist.current"
-if [ -z "$AUDIO_OUT" ]; then
+if [ -z "${AUDIO_OUT}" ]; then
     AUDIO_OUT="alsa"
 fi
 function print_song_info {
@@ -33,7 +33,7 @@ function play_song {
 
 rm -f $PLAYLIST_FILE
 
-find ${MUSIC} -regextype posix-extended -regex "$1" | shuf >> ${PLAYLIST_FILE}
+find "${MUSIC}" -regextype posix-extended -regex "$1" | shuf >> ${PLAYLIST_FILE}
 
 mapfile -t songs < ${PLAYLIST_FILE}
 num_songs=${#songs[*]}

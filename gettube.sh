@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Usage: gettube.sh <YOUTUBE_VIDEO_ID>
 # Downloads the video into /home/pi/Videos/youtube/<Uploader>/<title>-<id>.<extension>
 #
