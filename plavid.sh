@@ -1,10 +1,10 @@
 #!/bin/bash
 filename=$1
-filedir=$(dirname "${filename")
+filedir=$(dirname "${filename}")
 subtitles=(`ls ${filedir}/*.srt 2>/dev/null`)
 subtitle="${subtitle[0]}"
 if [ -z "${AUDIO_OUT}" ]; then
-    AUDIO_OUT="alsa"
+    AUDIO_OUT="hdmi"
 fi
 if [ -z "${subtitle}" ]; then
     echo "Playing $filename"
