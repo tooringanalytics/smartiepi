@@ -85,10 +85,12 @@ Slideshows require the ```feh``` package which is installed by the installation 
 
 To view a bunch of Photos as a slideshow:
 
-  * Store your photos under ```/home/pi/Pictures/external/<ALBUM-NAME>```.
-  * ```bash
+1. Store your photos under ```/home/pi/Pictures/external/<ALBUM-NAME>```.
+
+2. To play the slideshow:
+```bash
   slideshow.sh <ALBUM-NAME>
-  ```
+```
 
 The default delay is 5s.
 
