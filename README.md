@@ -33,15 +33,10 @@ Installation
 
 First download Smartiepi and make sure the requirements are satisfied.
 
-cd to the sorce directry and execute ```install.sh```.
+```cd``` to the source directry and execute ```install_smartiepi.sh```.
 
-Add ```~bin``` to the PATH environment variable.
-
-```bash
-export PATH=~bin:${PATH}
-```
-
-Also add the above line to your ```~/.bashrc``` file.
+The script will install dependencies, set up directories and execution paths.
+When finished, it will reboot the raspberry pi.
 
 
 Usage
@@ -88,6 +83,12 @@ Playing Slideshows
 
 Slideshows require the ```feh``` package which is installed by the installation script.
 
-Go to the Start type menu at he bottom left hand corner, selecting Preferences and then Screensaver.
+To view a bunch of Photos as a slideshow:
 
-Set the blank out time to 720 (the max allowed time)
+  * Store your photos under ```/home/pi/Pictures/external/<ALBUM-NAME>```.
+  * ```bash
+  slideshow.sh <ALBUM-NAME>
+  ```
+
+The default delay is 5s.
+

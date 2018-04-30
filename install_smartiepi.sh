@@ -71,6 +71,6 @@ echo "Adding scripts to path..."
 source ~/.bash_profile
 
 echo "Done!"
-echo "Rebooting in 2 seconds..."
+echo "Rebooting in 5 seconds..."
 sleep 5
 sudo reboot now
