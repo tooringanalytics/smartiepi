@@ -54,16 +54,16 @@ transmission-cli \
 transmission-common \
 curl \
 xvkbd \
+screen \
 realvnc-vnc-server \
 realvnc-vnc-viewer
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl
 sudo chmod a+rx /usr/bin/youtube-dl
 
-# Enable SSH and disable screen blanking
-echo "Enabling SSH, Disabling screen blanking..."
+# Enable SSH
+echo "Enabling SSH..."
 sudo touch /boot/ssh
-sudo sed '/consoleblank/d' /boot/cmdline.txt >/boot/cmdline.txt
-sudo echo 'consoleblank=0' >>/boot/cmdline.txt
+# Add the parameters 'consoleblank=0' to the kernel params in /boot/cmdline.txt
 
 
 echo "Adding scripts to path..."
