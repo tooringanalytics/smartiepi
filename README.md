@@ -8,7 +8,10 @@ Requirements
 
  * mp3info
  * omxplayer
-
+ * curl
+ * youtube-dl
+ * feh
+ * transmission
 
 Downloading Smartiepi
 ======================
@@ -30,9 +33,9 @@ Installation
 
 First download Smartiepi and make sure the requirements are satisfied.
 
-Then, create a 'bin' directory in your home folder, and copy
-all ```*.sh``` files in the repository into that directory. Add ```~bin``` to the
-PATH environment variable.
+cd to the sorce directry and execute ```install.sh```.
+
+Add ```~bin``` to the PATH environment variable.
 
 ```bash
 export PATH=~bin:${PATH}
@@ -54,14 +57,14 @@ plamusic.sh '.*\/Western.*\.(mp3|avi|ogg)$'
 ```
 
 The environment variable ```AUDIO_OUT``` can be used to set the audio output.
-It can be one of "hdmi", "local" or "alsa". Use ```hdmi``` for direct hdmi
+It can be one of "hdmi", "local" or "alsa" (default). Use ```hdmi``` for direct hdmi
 audio output, ```local``` for audio through the headphone socket and ```alsa```
 for output through bluetooth, for example (assuming bluetooth is the default
 output configured by ALSA).
 
 Playing Youtube Videos
 -----------------------
-
+Youtube play requires the packes youtube-pl which is downloaded by isntall.sh
 Youtube videos are downloaded and stored under ```/home/pi/Videos/youtube```.
 
 Playing Movies
@@ -83,4 +86,8 @@ same directory as the movie file.
 Playing Slideshows
 -------------------
 
-TBD
+Slideshows require the ```feh``` package which is installed by the installation script.
+
+Go to the Start type menu at he bottom left hand corner, selecting Preferences and then Screensaver.
+
+Set the blank out time to 720 (the max allowed time)
